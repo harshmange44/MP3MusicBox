@@ -36,31 +36,30 @@ public void run(DbObjectMusic rec) throws IOException {
     option = kb.next();
     System.out.println("------------------------------");
     while (true) {
-        if (option.charAt(0) == '1') {
+        if (option.equals("1")) {
              rec.readFromConsole();
              add(rec,database);
         }
-        else if (option.charAt(0) == '2') {
+        else if (option.equals("2")) {
              rec.readKey();
              if (find(rec,database) == false)
                  System.out.println("Data NOT found...");
         }
-        else if (option.charAt(0) == '3') {
+        else if (option.equals("3")) {
              rec.readKey();
              modify(rec,database);
         }
-        else if (option.charAt(0) == '4') {
+        else if (option.equals("4")) {
              if(view(database)==false)
                  System.out.println("There is NO Data available...");
         }
-        else if (option.charAt(0) != '5'){
+        else if (option.equals("5")){
              database.close();
-             System.out.println("Wrong option");
+             System.out.println("Signing Off...!\n\nThank You");
+             return;
         }
-        else{ 
-            System.out.println("Signing Off...!\n\nThank You");
-            return;
-        
+        else{
+            System.out.println("Wrong option");
         }
 //        printDb(rec);
         System.out.println("------------------------------");

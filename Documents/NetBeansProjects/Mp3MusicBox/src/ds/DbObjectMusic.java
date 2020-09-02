@@ -31,8 +31,8 @@ public class DbObjectMusic extends DbObject{
     @Override
     public void readFromConsole() {
         System.out.println("-------------------------");
-        System.out.print("Enter the Song ID: ");
-        newSongId = Integer.parseInt(kb.nextLine());
+//        System.out.print("Enter the Song ID: ");
+//        newSongId = Integer.parseInt(kb.nextLine());
 //        kb.nextLine();
         System.out.print("Enter the Song Name: ");
         newSongName = kb.nextLine();
@@ -64,7 +64,7 @@ public class DbObjectMusic extends DbObject{
     @Override
     public void readKey() {
         System.out.println("=================================================");
-        System.out.print("Enter the Song ID that you want to search or modify: ");
+        System.out.print("Enter the Song ID or NAME that you want to search or modify: ");
         songFindKey = kb.nextLine();
     }
 
